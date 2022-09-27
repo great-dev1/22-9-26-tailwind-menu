@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/build/tailwind.css" />
+  <link rel="stylesheet" href="tailwind.css" />
   <title>Welcome to Tailwind!</title>
 </head>
 
@@ -14,14 +16,20 @@
   <header class="banner">
     <nav class="navigation">
       <div class="mx-auto flex justify-between">
-        <div class="logo-image">LOGO</div>
+        <div class="logo-image ml-4 lg:ml-40 text-xl">LOGO</div>
         <div class="flex">
-          <div class="search-toogle">Sök</div>
+          <div class="search-toogle w-20 lg:w-64">
+            <i class="fa fa-search text-3xl"></i>
+            <span class="hidden ml-2 lg:block text-xl">SEARCH</span>
+          </div>
 
-          <div class="menu-toogle">
+          <div class="menu-toogle w-20 lg:w-64">
             <input type="checkbox" id="active" />
-            <label for="active" class="menu-btn"><span></span></label>
+            <label for="active" class="menu-btn">
+              <span></span>
+            </label>
             <label for="active" class="close"></label>
+            <span class="menu-text hidden lg:block text-xl">MENU</span>
 
             <div class="content">
               <ul>

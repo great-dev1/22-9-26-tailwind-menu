@@ -11,12 +11,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 160px;
+  /* margin-left: 160px; */
 }
 
 .search-toogle {
   display: flex;
-  width: 202px;
+  /* width: 202px; */
   height: 88px;
   align-items: center;
   justify-content: center;
@@ -25,7 +25,7 @@
 
 .menu-toogle {
   display: flex;
-  width: 296px;
+  /* width: 296px; */
   height: 88px;
   align-items: center;
   justify-content: center;
@@ -34,6 +34,12 @@
 
 input[type="checkbox"] {
   display: none;
+}
+
+.menu-text {
+  position: relative;
+  color: white;
+  right: 70px;
 }
 
 .menu-btn {
@@ -50,6 +56,13 @@ input[type="checkbox"] {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+
+@media (min-width: 992px) {
+  .menu-btn {
+    right: 110px;
+  }
+}
+
 .menu-btn span,
 .menu-btn:before,
 .menu-btn:after {
@@ -61,9 +74,11 @@ input[type="checkbox"] {
   border-bottom: 2px solid #ffffff;
   transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
+
 .menu-btn:before {
   transform: translateY(-8px);
 }
+
 .menu-btn:after {
   transform: translateY(8px);
 }
@@ -77,14 +92,16 @@ input[type="checkbox"] {
 }
 
 /* closing animation */
-#active:checked + .menu-btn span {
+#active:checked+.menu-btn span {
   transform: scaleX(0);
 }
-#active:checked + .menu-btn:before {
+
+#active:checked+.menu-btn:before {
   transform: rotate(45deg);
   border-color: #fff;
 }
-#active:checked + .menu-btn:after {
+
+#active:checked+.menu-btn:after {
   transform: rotate(-45deg);
   border-color: #fff;
 }
@@ -99,7 +116,8 @@ input[type="checkbox"] {
   background: #7852f6;
   transition: all 0.6s ease-in-out;
 }
-#active:checked ~ .content {
+
+#active:checked~.content {
   /*left: 0;*/
   right: 0;
 }
@@ -158,7 +176,7 @@ input[type="checkbox"] {
   color: #1a73e8;
 }
 
-#active:checked ~ .content ul li a {
+#active:checked~.content ul li a {
   opacity: 1;
 }
 
@@ -167,9 +185,10 @@ input[type="checkbox"] {
   transform: translateX(100px);
 }
 
-#active:checked ~ .content ul li a {
+#active:checked~.content ul li a {
   transform: none;
-  transition-timing-function: ease, cubic-bezier(0.1, 1.3, 0.3, 1); /* easeOutBackを緩めた感じ */
+  transition-timing-function: ease, cubic-bezier(0.1, 1.3, 0.3, 1);
+  /* easeOutBackを緩めた感じ */
   transition-delay: 0.6s;
   transform: translateX(-100px);
 }
