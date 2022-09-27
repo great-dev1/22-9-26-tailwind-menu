@@ -19,17 +19,22 @@
         <div class="logo-image ml-4 lg:ml-40 text-xl">LOGO</div>
         <div class="flex">
           <div class="search-toogle w-20 lg:w-64">
-            <i class="fa fa-search text-3xl"></i>
-            <span class="hidden ml-2 lg:block text-xl">SEARCH</span>
+            <input type="checkbox" id="search-active" />
+            <label for="search-active" class="flex" onclick="onSearchClick()">
+              <i class="fa fa-search text-3xl cursor-pointer"></i>
+              <span class="hidden ml-2 lg:block text-xl cursor-pointer">SEARCH</span>
+            </label>
+
+            <div class="search-content"></div>
           </div>
 
           <div class="menu-toogle w-20 lg:w-64">
             <input type="checkbox" id="active" />
-            <label for="active" class="menu-btn">
+            <label for="active" class="menu-btn" onclick="onMenuClick()">
               <span></span>
             </label>
             <label for="active" class="close"></label>
-            <span class="menu-text hidden lg:block text-xl">MENU</span>
+            <label for="active" class="menu-text hidden lg:block text-xl cursor-pointer" onclick="onMenuClick()">MENU</label>
 
             <div class="content">
               <ul>
@@ -44,6 +49,8 @@
       </div>
     </nav>
   </header>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>
